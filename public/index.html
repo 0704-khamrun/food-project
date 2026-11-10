@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food Waste Rescue</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-leaf"></i>
+            Food<span>Rescue</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#donate">Donate Food</a>
+            <a href="#available">Available Food</a>
+        </div>
+
+        <a href="#donate" class="nav-btn">Donate Now <i class="fa-solid fa-arrow-right"></i></a>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="tag">
+                <i class="fa-solid fa-heart"></i>
+                Together Against Food Waste
+            </span>
+
+            <h1>
+                Save Food.<br>
+                <span>Share Happiness.</span>
+            </h1>
+
+            <p>
+                Every meal matters. Connect surplus food with people
+                who need it. Let's build a world where no food goes to waste
+                and nobody sleeps hungry.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#donate" class="primary-btn">
+                    Donate Food <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#about" class="secondary-btn">
+                    Learn More
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <h2 id="heroMeals">0</h2>
+                    <p>Meals Shared</p>
+                </div>
+
+                <div>
+                    <h2 id="heroDonations">0</h2>
+                    <p>Donations</p>
+                </div>
+
+                <div>
+                    <h2>100%</h2>
+                    <p>Love & Care</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=900"
+            alt="Healthy fresh food">
+
+            <div class="floating-card">
+                <i class="fa-solid fa-heart"></i>
+                <div>
+                    <h4>Share a Meal</h4>
+                    <p>Spread kindness today!</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+
+    <section class="about" id="about">
+
+        <div class="section-heading">
+
+            <span>OUR MISSION</span>
+
+            <h2>Small Actions, <span>Big Changes</span></h2>
+
+            <p>
+                We believe that food is too precious to waste.
+                Our platform helps connect food donors with communities.
+            </p>
+
+        </div>
+
+        <div class="about-cards">
+
+            <div class="about-card">
+                <i class="fa-solid fa-utensils"></i>
+                <h3>Save Food</h3>
+                <p>Rescue surplus food from homes, restaurants and events.</p>
+            </div>
+
+            <div class="about-card">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                <h3>Share Happiness</h3>
+                <p>Help people access meals and reduce food insecurity.</p>
+            </div>
+
+            <div class="about-card">
+                <i class="fa-solid fa-earth-asia"></i>
+                <h3>Protect Earth</h3>
+                <p>Reduce food waste and support a cleaner environment.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DONATION SECTION -->
+
+    <section class="donate-section" id="donate">
+
+        <div class="donate-info">
+
+            <span class="tag">MAKE A DIFFERENCE</span>
+
+            <h2>Your Extra Food Can Become Someone's <span>Hope.</span></h2>
+
+            <p>
+                Have extra food? Don't throw it away!
+                Fill out the donation form and help someone enjoy
+                a fresh and delicious meal.
+            </p>
+
+            <div class="donate-point">
+                <i class="fa-solid fa-circle-check"></i>
+                Easy food donation process
+            </div>
+
+            <div class="donate-point">
+                <i class="fa-solid fa-circle-check"></i>
+                Connect with food recipients
+            </div>
+
+            <div class="donate-point">
+                <i class="fa-solid fa-circle-check"></i>
+                Make every meal count
+            </div>
+
+        </div>
+
+
+        <div class="form-card">
+
+            <h2><i class="fa-solid fa-bowl-food"></i> Donate Food</h2>
+
+            <p>Enter your food donation details below.</p>
+
+            <form id="donationForm">
+
+                <label>Your Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <label>Food Name</label>
+                <input type="text" id="food" placeholder="Example: Vegetable Rice" required>
+
+                <label>Quantity (Number of Meals)</label>
+                <input type="number" id="quantity" min="1" placeholder="Enter quantity" required>
+
+                <label>Location</label>
+                <input type="text" id="location" placeholder="Enter your location" required>
+
+                <label>Contact Number</label>
+                <input type="tel" id="phone" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number" required>
+
+                <label>Food Category</label>
+
+                <select id="foodType" required>
+                    <option value="">Select food category</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="Non-Vegetarian">Non-Vegetarian</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="Snacks">Snacks</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <button type="submit" class="submit-btn">
+                    Submit Donation <i class="fa-solid fa-heart"></i>
+                </button>
+
+                <p id="message"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- AVAILABLE DONATIONS -->
+
+    <section class="available" id="available">
+
+        <div class="section-heading">
+
+            <span>FOOD CONNECTIONS</span>
+
+            <h2>Available <span>Food Donations</span></h2>
+
+            <p>Explore the food donations shared by generous people.</p>
+
+        </div>
+
+        <div class="donation-grid" id="donationList">
+
+            <p class="empty-message">Loading donations...</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- IMPACT SECTION -->
+
+    <section class="impact">
+
+        <h2>Be the Reason Someone Smiles Today!</h2>
+
+        <p>
+            Your small contribution can create a big impact.
+            Together, let's rescue food and share happiness.
+        </p>
+
+        <a href="#donate" class="impact-btn">
+            Start Donating <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            <i class="fa-solid fa-leaf"></i>
+            Food<span>Rescue</span>
+        </div>
+
+        <p>Saving Food, Feeding Lives, Building a Better Tomorrow.</p>
+
+        <div class="social-icons">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+
+        <p class="copyright">
+            © 2026 Food Waste Rescue. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

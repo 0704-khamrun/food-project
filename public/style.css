@@ -1,0 +1,659 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --green: #238b55;
+    --dark-green: #145c39;
+    --light-green: #eaf7ee;
+    --text: #26352c;
+    --white: #ffffff;
+}
+
+body {
+    background: #ffffff;
+    color: var(--text);
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 8%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.logo, .footer-logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--dark-green);
+}
+
+.logo i, .footer-logo i {
+    color: var(--green);
+}
+
+.logo span, .footer-logo span {
+    color: var(--green);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+.nav-btn {
+    background: var(--green);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: var(--dark-green);
+    transform: translateY(-3px);
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 620px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: linear-gradient(120deg, #f0faf2, #ffffff);
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.tag {
+    display: inline-block;
+    background: #dff4e5;
+    color: var(--green);
+    padding: 9px 17px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.2;
+    color: var(--dark-green);
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: var(--green);
+}
+
+.hero-content > p {
+    color: #68756b;
+    margin: 25px 0;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.primary-btn, .secondary-btn {
+    padding: 14px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: var(--green);
+    color: white;
+}
+
+.primary-btn:hover {
+    background: var(--dark-green);
+    transform: translateY(-4px);
+}
+
+.secondary-btn {
+    border: 1px solid var(--green);
+    color: var(--green);
+}
+
+.secondary-btn:hover {
+    background: var(--light-green);
+}
+
+.hero-stats {
+    display: flex;
+    gap: 45px;
+    margin-top: 45px;
+}
+
+.hero-stats h2 {
+    color: var(--green);
+    font-size: 27px;
+}
+
+.hero-stats p {
+    color: #777;
+    font-size: 12px;
+}
+
+.hero-image {
+    width: 48%;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.floating-card {
+    position: absolute;
+    bottom: 25px;
+    left: -30px;
+    background: white;
+    padding: 18px;
+    border-radius: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.floating-card i {
+    color: var(--green);
+    font-size: 28px;
+}
+
+.floating-card h4 {
+    font-size: 14px;
+}
+
+.floating-card p {
+    font-size: 11px;
+    color: #777;
+}
+
+
+/* SECTION HEADINGS */
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.section-heading > span {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    margin: 15px 0;
+    color: var(--dark-green);
+}
+
+.section-heading h2 span {
+    color: var(--green);
+}
+
+.section-heading p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.8;
+}
+
+
+/* ABOUT */
+
+.about {
+    padding: 80px 8%;
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.about-card {
+    background: white;
+    text-align: center;
+    padding: 40px 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(35,139,85,0.12);
+}
+
+.about-card i {
+    font-size: 35px;
+    color: var(--green);
+    background: var(--light-green);
+    padding: 22px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    margin-bottom: 12px;
+    color: var(--dark-green);
+}
+
+.about-card p {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.8;
+}
+
+
+/* DONATION FORM */
+
+.donate-section {
+    padding: 90px 8%;
+    background: #f1f9f3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.donate-info {
+    max-width: 470px;
+}
+
+.donate-info h2 {
+    font-size: 40px;
+    color: var(--dark-green);
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.donate-info h2 span {
+    color: var(--green);
+}
+
+.donate-info > p {
+    color: #777;
+    line-height: 1.9;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.donate-point {
+    margin: 18px 0;
+    font-size: 14px;
+    color: #45544a;
+}
+
+.donate-point i {
+    color: var(--green);
+    margin-right: 10px;
+}
+
+.form-card {
+    background: white;
+    width: 480px;
+    padding: 35px;
+    border-radius: 22px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+}
+
+.form-card h2 {
+    color: var(--dark-green);
+    font-size: 24px;
+}
+
+.form-card h2 i {
+    color: var(--green);
+}
+
+.form-card > p {
+    color: #888;
+    font-size: 12px;
+    margin: 10px 0 25px;
+}
+
+form label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 17px;
+    border: 1px solid #e0e8e1;
+    background: #fafffb;
+    border-radius: 9px;
+    outline: none;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+form input:focus, form select:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(35,139,85,0.1);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: var(--dark-green);
+    transform: translateY(-3px);
+}
+
+#message {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+
+/* AVAILABLE DONATIONS */
+
+.available {
+    padding: 80px 8%;
+}
+
+.donation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.donation-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid #e8eee9;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.donation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.donation-card .food-icon {
+    background: var(--light-green);
+    color: var(--green);
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 25px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.donation-card h3 {
+    color: var(--dark-green);
+    margin-bottom: 15px;
+}
+
+.donation-card p {
+    color: #777;
+    font-size: 13px;
+    margin: 9px 0;
+}
+
+.donation-card p i {
+    color: var(--green);
+    margin-right: 8px;
+}
+
+.empty-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #888;
+    padding: 30px;
+}
+
+
+/* IMPACT */
+
+.impact {
+    background: linear-gradient(120deg, #145c39, #238b55);
+    text-align: center;
+    padding: 75px 20px;
+    color: white;
+}
+
+.impact h2 {
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.impact p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #e3f3e8;
+}
+
+.impact-btn {
+    display: inline-block;
+    background: white;
+    color: var(--dark-green);
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.impact-btn:hover {
+    transform: scale(1.05);
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #103d28;
+    color: white;
+    text-align: center;
+    padding: 45px 20px 20px;
+}
+
+.footer-logo {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: #7de6a5;
+}
+
+footer > p {
+    font-size: 13px;
+    color: #c4d9ca;
+}
+
+.social-icons {
+    margin: 25px 0;
+}
+
+.social-icons i {
+    margin: 0 12px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-icons i:hover {
+    color: #7de6a5;
+    transform: translateY(-4px);
+}
+
+.copyright {
+    border-top: 1px solid #315b43;
+    padding-top: 20px;
+    margin-top: 25px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 900px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-buttons, .hero-stats {
+        justify-content: center;
+    }
+
+    .donate-section {
+        flex-direction: column;
+    }
+
+    .donate-info {
+        max-width: 100%;
+    }
+
+    .form-card {
+        width: 100%;
+    }
+
+    .donation-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width: 600px) {
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-image img {
+        height: 280px;
+    }
+
+    .floating-card {
+        left: 0;
+    }
+
+    .hero-stats {
+        gap: 20px;
+    }
+
+    .hero-stats h2 {
+        font-size: 21px;
+    }
+
+    .about-cards,
+    .donation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .donate-info h2 {
+        font-size: 30px;
+    }
+
+    .impact h2 {
+        font-size: 27px;
+    }
+
+    .form-card {
+        padding: 22px;
+    }
+
+}
